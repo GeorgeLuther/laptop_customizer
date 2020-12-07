@@ -9,6 +9,7 @@ export default class Specs extends React.Component {
             return (
               <Parts
                 key={itemHash}
+                id={itemHash}
                 item={item}
                 feature={this.props.feature}
                 selected={this.props.selected}
