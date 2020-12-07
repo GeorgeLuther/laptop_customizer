@@ -1,11 +1,14 @@
 import React from "react";
 import Parts from "./Parts";
+import slugify from 'slugify'
 
 export default class Specs extends React.Component {
     render() {
           const options = this.props.features[this.props.feature].map(item => {
+            const itemHash = slugify(JSON.stringify(item));
             return (
               <Parts
+                key={itemHash}
                 item={item}
                 feature={this.props.feature}
                 selected={this.props.selected}
