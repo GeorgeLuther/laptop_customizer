@@ -1,5 +1,5 @@
 import React from 'react'
-import Feature from './Feature'
+import Specs from './Specs'
 
 const FEATURES = {
     Processor: [
@@ -50,7 +50,7 @@ class Form extends React.Component {
         const features = Object.keys(FEATURES).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
             return (
-                <Feature
+                <Specs
                     key={featureHash}
                     featureHash={featureHash}
                     feature={feature}

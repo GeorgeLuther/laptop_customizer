@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
-
 import './App.css';
 import Header from './header/Header';
-import Form from './form/Form';
-import Cart from './cart/Cart';
+import MainForm from './mainForm/MainForm';
+import MainSummary from './mainSummary/MainSummary';
 
 
 class App extends Component {
@@ -54,12 +51,12 @@ class App extends Component {
         <Header />
 
         <main>
-          <Form 
+          <MainForm 
             handleItemChange={(feature, newValue) => this.updateFeature(feature, newValue)}
             selected={this.state.selected}
             USCurrencyFormat={this.USCurrencyFormat}
           />
-          <Cart 
+          <MainSummary 
             selected={this.state.selected}
             USCurrencyFormat={this.USCurrencyFormat}
           />
